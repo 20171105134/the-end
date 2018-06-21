@@ -9,8 +9,14 @@
 #include <iostream>
 #include<string>
 using namespace std;
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    cout << "Hello, World!\n";
-    return 0;
-}
+class a{
+    int attarck;
+    int hp;
+    void basic (int attarck_,int hp_){};
+ 
+};
+a::basic
+
+class brid{
+    
+};
