@@ -8,15 +8,12 @@
 
 #include <iostream>
 #include<string>
-using namespace std;
-class a{
-    int attarck;
-    int hp;
-    void basic (int attarck_,int hp_){};
- 
-};
-a::basic
-
-class brid{
+#include<cstring>
+#include<fstream>
+#include<conio>
+int main()
+{
+    ofstream ocout;
+    ocout.open(".txt");
     
-};
+}
