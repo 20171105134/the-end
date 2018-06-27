@@ -10,10 +10,26 @@
 #include<string>
 #include<cstring>
 #include<fstream>
-#include<conio>
+#include<cstdlib>
+using namespace std;
 int main()
 {
-    ofstream ocout;
-    ocout.open(".txt");
-    
+    string  name;
+    int number;
+    string sex;
+    string classes;
+    int tel;
+    int a,b,c,d,e;
+    int max=0;
+    for (int i = 0; i < 5; i++)
+    {
+        if (max < a[i])
+            max = a[i]
+    }
+    int min=100;
+    for (int j=0;i<5;j++)
+    {
+        if(min>a[i])
+            min=a[i]
+    }
 }
