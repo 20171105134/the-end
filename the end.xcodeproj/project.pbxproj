@@ -23,6 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		971A3BCB20E66AE800DCC4A4 /* 备份.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "备份.strings"; path = "../备份.strings"; sourceTree = "<group>"; };
 		9774341720DB341E00BFA016 /* the end */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "the end"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9774341A20DB341E00BFA016 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +42,7 @@
 		9774340E20DB341D00BFA016 = {
 			isa = PBXGroup;
 			children = (
+				971A3BCB20E66AE800DCC4A4 /* 备份.strings */,
 				9774341920DB341E00BFA016 /* the end */,
 				9774341820DB341E00BFA016 /* Products */,
 			);
@@ -246,6 +248,7 @@
 				9774342020DB341E00BFA016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

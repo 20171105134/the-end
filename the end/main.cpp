@@ -14,6 +14,8 @@
 #include <streambuf>
 #include <sstream>
 #include <vector>
+#define _GNU_SOURCE
+#include <stdio.h>
 using namespace std;
 string Trim(string& str)
 {
@@ -23,7 +25,8 @@ string Trim(string& str)
     return str;
 }
 int main()
-{ifstream inFile("studentdata2.csv", ios::in);
+{
+    ifstream inFile("studentdata.csv", ios::in);
     string lineStr;
     vector<vector<string>> strArray;
     int array[3][3];
@@ -32,6 +35,7 @@ int main()
     char* end;
     if(inFile.fail())
         cout<<"读取文件失败"<<endl;
+    //文件读取成功
     while (getline(inFile, lineStr))
     {
         j=0;
@@ -44,17 +48,19 @@ int main()
         // 按照逗号分隔
         while (getline(ss, str, ','))
         {
-            array[i][j]=static_cast<int>(strtol(str.c_str(),&end,10));              //string -> int
+            array[i][j]=static_cast<int>(strtol(str.c_str(),&end,10));         //string -> int
             j++;
         }
         i++;
-}
-for(int i=0;i<3;i++)
-{
-    for(int j=0;j<3;j++)
-        cout<<array[i][j];
+    }
+    
+    for(int i=0;i<5;i++)
+    {
+        for(int j=0;j<5;j++)
+            cout<<array[i][j];
         cout<<endl;
-        }
-        getchar();
+    }
+    getchar();
+
         return 0;
-        }
+}
