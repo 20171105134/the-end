@@ -19,6 +19,8 @@ struct information
     char classes[20];
     int score;
     int rater1,rater2,rater3,rater4,rater5;
+    int tel;
+    int sum=rater1+rater2+rater3+rater4+rater5;
 };
 int main()
 {
@@ -27,8 +29,8 @@ int main()
     //FILE *fp1；
     //fp1 = fopen("xxxxx",w)；
     //xxxxx表示路径，w表示打开文件方式，这段代码是将文件指针赋给fp1。
-    int i=0,j;
-    fp1=fopen("studentdata.csv","r")；
+    int i,j;
+    fp1=fopen("/Users/s20171105134/Desktop/test621/studentdata.csv","r")；
     //“t” 只读打开一个文本文件，只允许读数据文件必须存在
     if(fp1==NULL)
     {
@@ -46,7 +48,16 @@ int main()
         while(!feof(fp1))
         {
             //%[^,] 匹配非,的任意字符
-            fscanf(fp1,%d,%[^,],%[^,],%d,%[^,],%[^,],%d,%d,%d,%d,%d,&a[i].number,&a[i].name,&a[i].sex,&a[i].)
+            fscanf(fp1,%d,%[^,],%[^,],%d,%[^,],%[^,],%d,%d,%d,%d,%d,&a[i].number,&a[i].name,&a[i].sex,&a[i].brith,&a[i].classes,&a[i]tel,&a[i].rater1,&a[i].rater2,&a[i].rater3,&a[i].rater4,&a[i].rater5);
+            i++;
         }
+        j=i;
+        for(i=0;i<j;i++)
+        {
+            printf("%d,%s,%s,%d,%s,%s,%d,%d,%d,%d,%d\n",&a[i].number,&a[i].name,&a[i].sex,&a[i].brith,&a[i].classes,&a[i].tel,&a[i].rater1,,&a[i].rater2,,&a[i].rater3,,&a[i].rater4,,&a[i].rater5);
+        }
+        fclose(fp1);
     }
+    
+    
 }
