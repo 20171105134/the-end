@@ -58,6 +58,17 @@ int main()
         }
         fclose(fp1);
     }
+    j=i;
+    int max[100],min[100];
+    int max[100],min[100];
     
-    
+    for(i=0;i<j;i++)
+        {
+            for(max[i]=min[i]=a[i].rater1;
+        }
+    j=i;
+    for(i=0;i<j;i++)
+        {
+                
+        }
 }
