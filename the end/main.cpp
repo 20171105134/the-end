@@ -80,15 +80,19 @@ int main()
         }
     for(i=0;i<j;i++)
         {
-          if(a[i].rater2<min[i])
-              min[i]=a[i].rater2;
-          if(a[i].rater3<min[i])
-             min[i]=a[i].rater3;
-          if(a[i].rater4<min[i])
-             min[i]=a[i].rater4;
-          if(a[i].rater5<min[i])
-             min[i]=a[i].rater5;
+               if(a[i].rater2<min[i])
+                   min[i]=a[i].rater2;
+               if(a[i].rater3<min[i])
+                   min[i]=a[i].rater3;
+               if(a[i].rater4<min[i])
+                   min[i]=a[i].rater4;
+               if(a[i].rater5<min[i])
+                   min[i]=a[i].rater5;
 
         }
     j=i;
+    for(i=0;i<j;i++)
+    {
+    
+    }
 }
