@@ -66,28 +66,28 @@ int main()
             max[i]=min[i]=a[i].rater1;
         }
     j=i;
-    //冒泡排序
+    //排序
     for(i=0;i<j;i++)
         {
-                if(a[i].rater2>max[i].rater)
+                if(a[i].rater2>max[i])
                     max[i]=a[i].rater2;
-                if(a[i].rater3>max[i].rater)
+                if(a[i].rater3>max[i])
                     max[i]=a[i].rater3;
-                if(a[i].rater4>max[i].rater)
+                if(a[i].rater4>max[i])
                     max[i]=a[i].rater4;
-                if(a[i].rater5>max[i].rater)
+                if(a[i].rater5>max[i])
                     max[i]=a[i].rater5;
         }
     for(i=0;i<j;i++)
         {
-          if(a[i].rater2,min[i])
-              min[i]=s[i]rater2;
-          if(a[i].rater3,min[i])
-             min[i]=s[i]rater3;
-          if(a[i].rater4,min[i])
-             min[i]=s[i]rater4;
-          if(a[i].rater5,min[i])
-             min[i]=s[i]rater5;
+          if(a[i].rater2<min[i])
+              min[i]=a[i].rater2;
+          if(a[i].rater3<min[i])
+             min[i]=a[i].rater3;
+          if(a[i].rater4<min[i])
+             min[i]=a[i].rater4;
+          if(a[i].rater5<min[i])
+             min[i]=a[i].rater5;
 
         }
     j=i;
