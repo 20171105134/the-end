@@ -20,16 +20,19 @@ struct information
     int score;
     int rater1,rater2,rater3,rater4,rater5;
     int tel;
-    int sum=rater1+rater2+rater3+rater4+rater5;
+    int point;
 };
 int main()
 {
+    
     struct information a[200];
     FILE*fp1,*fp2;
     //FILE *fp1；
     //fp1 = fopen("xxxxx",w)；
     //xxxxx表示路径，w表示打开文件方式，这段代码是将文件指针赋给fp1。
     int i,j;
+    int sum=a[i].rater1+a[i].rater2+a[i].rater3+a[i].rater4+a[i].rater5;
+
     fp1=fopen("/Users/s20171105134/Desktop/test621/studentdata.csv","r")；
     //“t” 只读打开一个文本文件，只允许读数据文件必须存在
     if(fp1==NULL)
@@ -59,16 +62,16 @@ int main()
         fclose(fp1);
     }
     j=i;
+    //使i，j的值等于0
     int max[100],min[100];
     
-    for(i=0;i<j;i++)
-        {
-            max[i]=min[i]=a[i].rater1;
-        }
-    j=i;
+   
+    max[i]=min[i]=a[i].rater1;
+    
     //排序
     for(i=0;i<j;i++)
         {
+            
                 if(a[i].rater2>max[i])
                     max[i]=a[i].rater2;
                 if(a[i].rater3>max[i])
@@ -80,6 +83,7 @@ int main()
         }
     for(i=0;i<j;i++)
         {
+            
                if(a[i].rater2<min[i])
                    min[i]=a[i].rater2;
                if(a[i].rater3<min[i])
@@ -93,6 +97,6 @@ int main()
     j=i;
     for(i=0;i<j;i++)
     {
-    
+        point=sum-a[i].max-a[i].min;
     }
 }
