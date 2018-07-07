@@ -3,30 +3,42 @@
 #include<cstring>
 #include<fstream>
 #include<cstdlib>
-#include <streambuf>
 #include <sstream>
-#include <vector>
-#define _GNU_SOURCE
-
 #include <stdio.h>
+#include <vector>
 using namespace std;
 //结构定义struct
-struct information
+
+string Trim(string& str)
 {
+    //str.find_first_not_of(" \t\r\n"),在字符串str中从索引0开始，返回首次不匹配"\t\r\n"的位置
+    str.erase(0,str.find_first_not_of(" \t\r\n"));
+    str.erase(str.find_last_not_of(" \t\r\n") + 1);
+    return str;
+}
+
+int main( int argc,const char * argv[])
+{
+    FILE *a;
     char name[20];
-    int number;
+    int number[20];
     char sex[5];
     char classes[20];
-    int score;
-    int rater1,rater2,rater3,rater4,rater5;
-    int tel;
-    int point;
-    int sum;
-};
-int main()
-{
+    int score[20];
+    int rater1[20],rater2[20],rater3[20],rater4[20],rater5[20];
+    int tel[20];
+    int point[20];
+    int sum[20];
+    int i,j;
+    if(a=fopen("/Users/s20171105134/Desktop/the end/data.csv","r")==0)
+    {
+        printf("文件不存在\n");
+    }
+    else
+    {
+      
     
-    struct information a[200];
+    /*struct information a[200];
     FILE*fp1,*fp2;
     //FILE *fp1；
     //fp1 = fopen("xxxxx",w)；
@@ -34,7 +46,7 @@ int main()
     int i,j;
 
     fp1=fopen("/Users/s20171105134/Desktop/the end/the end/data.csv","r")；
-    //“t” 只读打开一个文本文件，只允许读数据文件必须存在
+    //“r” 只读打开一个文本文件，只允许读数据文件必须存在
     if(fp1==NULL)
     {
         printf("error");
@@ -43,25 +55,26 @@ int main()
     }
     else
     {
+        //其功能为根据数据格式(format)从输入流(stream)中写入数据(argument)；与fgets的差别在于：fscanf遇到空格和换行时结束，注意空格时也结束
         fscanf(fp1,"%*[^\n]%*c");
         //%*[^\n]
         //这个通配符的意思就是
         //跳过所有字符 直到换行符为止。
-        //%*c 是“跳过”行尾 的 换行符。
-        while(!feof(fp1))
-        {
-            //%[^,] 匹配非,的任意字符
-            fscanf(fp1,%d,%[^,],%[^,],%d,%[^,],%[^,],%d,%d,%d,%d,%d,&a[i].number,&a[i].name,&a[i].sex,&a[i].brith,&a[i].classes,&a[i]tel,&a[i].rater1,&a[i].rater2,&a[i].rater3,&a[i].rater4,&a[i].rater5);
-            i++;
-        }
-        j=i;
+        //%*c 是“跳过”行尾 的 换行符。*/
         for(i=0;i<j;i++)
         {
-            printf("%d,%s,%s,%d,%s,%s,%d,%d,%d,%d,%d\n",&a[i].number,&a[i].name,&a[i].sex,&a[i].brith,&a[i].classes,&a[i].tel,&a[i].rater1,,&a[i].rater2,,&a[i].rater3,,&a[i].rater4,,&a[i].rater5);
+            //%[^,] 匹配非,的任意字符
+            fscanf(a,%d,%s,%[^,],%d,%[^,],%[^,],%d,%d,%d,%d,%d,&a[i].number,&a[i].name,&a[i].sex,&a[i].brith,&a[i].classes,&a[i]tel,&a[i].rater1,&a[i].rater2,&a[i].rater3,&a[i].rater4,&a[i].rater5);
+        }
+        j=i;
+              for(i=0;i<j;i++)
+        {
+            printf("%d,%s,%s,%d,%s,%s,%d,%d,%d,%d,%d\n",a[i].number,a[i].name,a[i].sex,a[i].brith,a[i].classes,a[i].tel,a[i].rater1,,a[i].rater2,,a[i].rater3,,a[i].rater4,,a[i].rater5);
         }
         fclose(fp1);
-    }
+        }
     j=i;
+    }
     //使i，j的值等于0
     int max[100],min[100];
         //排序
@@ -104,10 +117,9 @@ int main()
     }
     j=i;
     i=0;
-    fp2=fopen("/Users/s20171105134/Desktop/the end/the end/data.csv","w")；
-    fprint(fp2"number,name,sex,brith,classes,tel,rater1,rater2,rater3,rater4,rater5,point\n");
+        //fprintf其作用是格式化输出到一个流/文件中
     while(i<j)
     {
-    
+         fprintf(fp2,"%d,%s,%s,%d,%s,%d,%d,%d,%d,%d,%d\n")
     }
 }
