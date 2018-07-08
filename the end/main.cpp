@@ -3,15 +3,14 @@
 #include<cstring>
 #include<fstream>
 #include<cstdlib>
-#include <sstream>
 #include <stdio.h>
-#include <vector>
 using namespace std;
 //结构定义struct
 struct c
 {
     char name[20];
     int number[20];
+    int brith;
     char sex[5];
     char classes[20];
     int score[20];
@@ -43,7 +42,9 @@ int main( int argc,const char * argv[])
     int tel[20];
     int point[20];
     int sum[20];
+    int brith;
     int i=0,j=0,n=0;
+    int b;
     ifstream fin("/Users/s20171105134/Desktop/the end/the end/data.csv");
     string line;
     while (getline(fin,line))
@@ -61,7 +62,7 @@ int main( int argc,const char * argv[])
             s[i].min=rater[1];
             for(i=0;j<5;i++)
             {
-                if a[i].point<s[i].min)
+                if (a[i].point<s[i].min)
                   {
                       s[i].min=s[i].score[j];
                   }
@@ -79,23 +80,17 @@ int main( int argc,const char * argv[])
              /* for(i=0;i<j;i++)
         {
             printf("%d,%s,%s,%d,%s,%s,%d,%d,%d,%d,%d\n",a[i].number,a[i].name,a[i].sex,a[i].brith,a[i].classes,a[i].tel,a[i].rater1,a[i].rater2,a[i].rater3,a[i].rater4,a[i].rater5);
-        }
-       for(i=0;i<j;i++)
+        }*/
+    for(i=0;i<b;i++)
     {
         
         a[i].sum=(a[i].rater1+a[i].rater2+a[i].rater3+a[i].rater4+a[i].rater5);
 
     }
-    j=i;*/
-    for(i=0;i<j;i++)
+    j=i;    for(i=0;i<j;i++)
     {
         a[i].point=(a[i].sum-max[i]-min[i])/3;
     }
-    j=i;
-    i=0;
         //fprintf其作用是格式化输出到一个流/文件中
-    while(i<j)
-    {
-         fprintf(fp2,"%d,%s,%s,%d,%s,%d,%d,%d,%d,%d,%d\n")
-    }
+        return 0;
 }
